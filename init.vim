@@ -31,6 +31,13 @@ let g:airline_theme='deus'
 let g:airline_symbols = {}
 let g:airline_symbols.colnr = '  cn:'
 let g:airline#extensions#whitespace#enabled = 0
+" tabline config
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'default'
+let g:airline#extensions#tabline#show_tab_nr = 0 " disable tab number
+let g:airline#extensions#tabline#show_splits = 0 " disables the buffer name that displays on the right of the tabline
+let g:airline#extensions#tabline#show_tab_count = 0 " dont show tab count on the right of tabline
+let g:airline#extensions#tabline#show_close_button = 0 " disable close button
 
 " nerdtree config
 let g:NERDTreeShowHidden = 1
@@ -55,7 +62,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" toggleterm setup
+" lua plugin config 
 lua << EOF
 require('toggleterm_config')
 require('autopair_config')
