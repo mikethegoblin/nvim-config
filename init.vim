@@ -15,12 +15,19 @@ Plug 'https://github.com/preservim/nerdtree' " file explorer plugin
 Plug 'https://github.com/ryanoasis/vim-devicons' " plugin for icons
 Plug 'https://github.com/tpope/vim-commentary' " plugin for code commenting
 Plug 'https://github.com/EdenEast/nightfox.nvim' " editor colorscheme
-Plug 'https://github.com/neoclide/coc.nvim'  " Auto Completion
 Plug 'akinsho/toggleterm.nvim' " easy-to-use terminal toggle
 Plug 'windwp/nvim-autopairs'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'navarasu/onedark.nvim' " editor colorscheme
 Plug 'Vimjas/vim-python-pep8-indent'
+" plugins for auto completion
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'L3MON4D3/LuaSnip' " snippet engine
+Plug 'saadparwaiz1/cmp_luasnip' " snippet completion
+Plug 'rafamadriz/friendly-snippets' " a bunch of preconfigured snippets for different languages
 call plug#end()
 
 set encoding=utf-8
@@ -52,8 +59,8 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 
 " other key bindings
 inoremap jk <Esc>
-inoremap <C-f> <Right>
-inoremap <C-b> <Left>
+" inoremap <C-f> <Right>
+" inoremap <C-b> <Left>
 " key bindings to move between windows in terminal and normal mode
 tnoremap <C-h> <C-\><C-n><C-w>h
 tnoremap <C-j> <C-\><C-n><C-w>j
@@ -69,6 +76,7 @@ lua << EOF
 require('toggleterm_config')
 require('autopair_config')
 require('treesitter_config')
+require('cmp_config')
 EOF
 
 
