@@ -19,12 +19,13 @@ Plug 'https://github.com/neoclide/coc.nvim'  " Auto Completion
 Plug 'akinsho/toggleterm.nvim' " easy-to-use terminal toggle
 Plug 'windwp/nvim-autopairs'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'navarasu/onedark.nvim' " editor colorscheme
 call plug#end()
 
 set encoding=utf-8
 
 " colorscheme
-colorscheme nordfox
+colorscheme onedark
 
 " statusbar theme
 let g:airline_theme='deus'
