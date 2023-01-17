@@ -20,6 +20,7 @@ Plug 'akinsho/toggleterm.nvim' " easy-to-use terminal toggle
 Plug 'windwp/nvim-autopairs'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'navarasu/onedark.nvim' " editor colorscheme
+Plug 'Vimjas/vim-python-pep8-indent'
 call plug#end()
 
 set encoding=utf-8
