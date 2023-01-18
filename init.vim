@@ -28,6 +28,14 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'L3MON4D3/LuaSnip' " snippet engine
 Plug 'saadparwaiz1/cmp_luasnip' " snippet completion
 Plug 'rafamadriz/friendly-snippets' " a bunch of preconfigured snippets for different languages
+
+" lsp 
+Plug 'neovim/nvim-lspconfig'
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'hrsh7th/cmp-nvim-lsp'
+
+Plug 'RRethy/vim-illuminate'
 call plug#end()
 
 set encoding=utf-8
@@ -59,8 +67,8 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 
 " other key bindings
 inoremap jk <Esc>
-" inoremap <C-f> <Right>
-" inoremap <C-b> <Left>
+inoremap <C-f> <Right>
+inoremap <C-b> <Left>
 " key bindings to move between windows in terminal and normal mode
 tnoremap <C-h> <C-\><C-n><C-w>h
 tnoremap <C-j> <C-\><C-n><C-w>j
@@ -77,6 +85,7 @@ require('toggleterm_config')
 require('autopair_config')
 require('treesitter_config')
 require('cmp_config')
+require('lsp')
 EOF
 
 
