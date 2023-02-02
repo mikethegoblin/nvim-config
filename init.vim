@@ -66,9 +66,14 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 
 
 " other key bindings
+nnoremap <space> <nop>
+let mapleader=" "
 inoremap jk <Esc>
 inoremap <C-f> <Right>
 inoremap <C-b> <Left>
+" for easy copy and paste to and from system clipboard
+noremap <Leader>y "*y
+noremap <Leader>p "*p 
 " key bindings to move between windows in terminal and normal mode
 tnoremap <C-h> <C-\><C-n><C-w>h
 tnoremap <C-j> <C-\><C-n><C-w>j
